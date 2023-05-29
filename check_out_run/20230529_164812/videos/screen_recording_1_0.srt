@@ -1,0 +1,100 @@
+1
+00:00:00,731 --> 00:00:07,346
+1. openBrowser("")
+
+2
+00:00:07,362 --> 00:00:07,999
+5. navigateToUrl("https://www.saucedemo.com/")
+
+3
+00:00:08,000 --> 00:00:09,240
+9. setText(findTestObject("Object Repository/Page_Swag Labs/input_Swag Labs_user-name"), user_name)
+
+4
+00:00:09,241 --> 00:00:10,111
+13. setText(findTestObject("Page_Swag Labs/input_Swag Labs_password"), password)
+
+5
+00:00:10,111 --> 00:00:10,806
+17. click(findTestObject("Object Repository/Page_Swag Labs/input_Swag Labs_login-button"))
+
+6
+00:00:10,806 --> 00:00:11,280
+21. actualValue = getText(findTestObject("Object Repository/Page_Swag Labs/div_29.99"))
+
+7
+00:00:11,281 --> 00:00:11,284
+25. println(actualValue)
+
+8
+00:00:11,284 --> 00:00:11,887
+29. click(findTestObject("Object Repository/Page_Swag Labs/button_Add to cart"))
+
+9
+00:00:11,888 --> 00:00:12,495
+33. click(findTestObject("Object Repository/Page_Swag Labs/button_Remove"))
+
+10
+00:00:12,496 --> 00:00:13,054
+37. click(findTestObject("Object Repository/Page_Swag Labs/button_Add to cart"))
+
+11
+00:00:13,055 --> 00:00:13,680
+41. click(findTestObject("Object Repository/Page_Swag Labs/a_1"))
+
+12
+00:00:13,681 --> 00:00:14,284
+45. click(findTestObject("Object Repository/Page_Swag Labs/button_Checkout"))
+
+13
+00:00:14,284 --> 00:00:15,252
+49. setText(findTestObject("Object Repository/Page_Swag Labs/input_Checkout Your Information_firstName"), "sauce")
+
+14
+00:00:15,253 --> 00:00:16,207
+53. setText(findTestObject("Object Repository/Page_Swag Labs/input_Checkout Your Information_lastName"), "sauce2")
+
+15
+00:00:16,208 --> 00:00:17,092
+57. setText(findTestObject("Object Repository/Page_Swag Labs/input_Checkout Your Information_postalCode"), "12345")
+
+16
+00:00:17,092 --> 00:00:17,747
+61. click(findTestObject("Object Repository/Page_Swag Labs/input_Cancel_continue"))
+
+17
+00:00:17,748 --> 00:00:18,376
+65. expectedvalue1 = getText(findTestObject("Object Repository/Page_Swag Labs/div_29.99"))
+
+18
+00:00:18,376 --> 00:00:18,379
+69. println(expectedvalue1)
+
+19
+00:00:18,380 --> 00:00:18,844
+73. expectedvalue2 = getText(findTestObject("Object Repository/Page_Swag Labs/div_Total 32.39"))
+
+20
+00:00:18,844 --> 00:00:18,847
+77. println(expectedvalue2)
+
+21
+00:00:18,848 --> 00:00:18,880
+81. verifyEqual(actualValue, expectedvalue1)
+
+22
+00:00:18,880 --> 00:00:18,896
+85. verifyNotEqual(actualValue, expectedvalue2)
+
+23
+00:00:18,896 --> 00:00:19,428
+89. click(findTestObject("Object Repository/Page_Swag Labs/button_Finish"))
+
+24
+00:00:19,429 --> 00:00:19,992
+93. verifyElementText(findTestObject("Object Repository/Page_Swag Labs/h2_Thank you for your order"), "Thank you for your order!")
+
+25
+00:00:19,993 --> 00:00:21,072
+97. closeBrowser()
+
