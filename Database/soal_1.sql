@@ -1,0 +1,1 @@
+SELECT emp_name,emp_status FROM tbl_employee

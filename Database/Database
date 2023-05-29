@@ -1,0 +1,55 @@
+/*
+SQLyog Community v13.1.1 (64 bit)
+MySQL - 10.1.38-MariaDB : Database - test_sqa
+*********************************************************************
+*/
+
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`test_sqa` /*!40100 DEFAULT CHARACTER SET latin1 */;
+
+USE `test_sqa`;
+
+/*Table structure for table `tbl_employee` */
+
+CREATE TABLE `tbl_employee` (
+  `emp_code` varchar(10) NOT NULL,
+  `emp_name` varchar(10) DEFAULT NULL,
+  `emp_status` char(1) DEFAULT NULL,
+  PRIMARY KEY (`emp_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tbl_employee` */
+
+insert  into `tbl_employee`(`emp_code`,`emp_name`,`emp_status`) values 
+('Emp001','Abdi','R'),
+('Emp002','Budi','P'),
+('Emp003','Cahya','P'),
+('Emp004','Danu','P');
+
+/*Table structure for table `tbl_income` */
+
+CREATE TABLE `tbl_income` (
+  `emp_code` varchar(10) NOT NULL,
+  `emp_income` double DEFAULT NULL,
+  PRIMARY KEY (`emp_code`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tbl_income` */
+
+insert  into `tbl_income`(`emp_code`,`emp_income`) values 
+('Emp001',10000000),
+('Emp002',9000000),
+('Emp003',15000000),
+('Emp004',12000000);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
